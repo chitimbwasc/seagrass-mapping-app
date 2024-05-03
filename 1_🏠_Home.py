@@ -15,7 +15,7 @@ display_image.display_image('https://upload.wikimedia.org/wikipedia/commons/4/45
 
 
 ################### FILE UPLOAD SECTION #######################
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+# uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 import os
 import sys
@@ -26,14 +26,14 @@ import numpy as np
 import utils_v2
 from model_utils import *
 # Streamlit app
-def main(image_file):
+def main():
     model = utils_v2.retrieve_model()
     
     st.title("Mapping seagrass with Satellite Imagery and Deep Learning")
     st.write("Choose an image to classify")
     
     # Choose an image file in the sidebar
-    # image_file = st.sidar.file_uploader("Choose an image file", type=["tif"])
+    image_file = st.file_uploader("Choose an image file", type=["tif"])
     
     if image_file is not None:
         # Display the chosen image
@@ -55,6 +55,6 @@ def main(image_file):
         #st.write("Confidence: ", prediction[2])
 
 
-main(uploaded_file)
+main()
 
 font_modifier.make_font_poppins()
