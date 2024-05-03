@@ -78,4 +78,4 @@ tifffile==2024.4.24
 mlflow==2.12.1
 cloudpickle==2.2.1
 segmentation-models==1.0.1
-utils_v2==2.0.0
+
