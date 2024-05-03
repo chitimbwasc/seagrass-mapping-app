@@ -24,7 +24,7 @@ def dice_loss_plus_2focal_loss(y_true, y_pred):
 
 
 #set_secrets()
-get_model_info()
+# get_model_info()
 
 
 
