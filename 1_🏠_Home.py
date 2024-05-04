@@ -26,7 +26,11 @@ import numpy as np
 import utils_v2
 from model_utils import *
 
-
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+os.environ["SM_FRAMEWORK"] = "tf.keras"
+from tensorflow import keras
+import mlflow
+from mlflow.tracking import MlflowClient
 
 
 @keras.saving.register_keras_serializable(package="my_package", name="dice_loss_plus_2focal_loss")
