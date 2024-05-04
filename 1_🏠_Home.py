@@ -24,6 +24,6 @@ display_image.display_image('https://upload.wikimedia.org/wikipedia/commons/4/45
         #st.write("Confidence: ", prediction[2])
 
 
-main()
+
 
 font_modifier.make_font_poppins()
