@@ -15,13 +15,8 @@ display_image.display_image('https://upload.wikimedia.org/wikipedia/commons/4/45
 
 
 ################### FILE UPLOAD SECTION #######################
-# uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
-
-        # Make a prediction and display it
-        #prediction = predict(load_image(image_file))
-        #st.write("Prediction: ", prediction[1])
-        #st.write("Confidence: ", prediction[2])
 
 
 
