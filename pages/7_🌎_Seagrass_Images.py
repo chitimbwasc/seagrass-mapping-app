@@ -42,12 +42,15 @@ def dice_loss_plus_2focal_loss(y_true, y_pred):
 
 #set_secrets()
 # get_model_info()
-RUN_ID = '42909ca2a5ef4a4c94e5fe030380e5e8'
+
 
 
 @st.cache_resource
 def retrieve_model():
     client = MlflowClient()
+    # Added for testing
+    RUN_ID = '42909ca2a5ef4a4c94e5fe030380e5e8'
+    ####
     MLFLOW_TRACKING_URI = os.getenv('MLFLOW_TRACKING_URI')
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     RUN_ID = os.getenv('best_model_run_id')
