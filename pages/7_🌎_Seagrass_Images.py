@@ -57,7 +57,8 @@ def retrieve_model():
     print(f'retrieving the model with run_id {RUN_ID}')
     custom_objects = {"dice_loss_plus_2focal_loss": dice_loss_plus_2focal_loss}
     with keras.saving.custom_object_scope(custom_objects):
-        model = mlflow.pyfunc.load_model("runs:/" + RUN_ID + "/model")
+        # model = mlflow.pyfunc.load_model("runs:/" + RUN_ID + "/model")
+        model = mlflow.pyfunc.load_model("runs:/42909ca2a5ef4a4c94e5fe030380e5e8/model")
     print(f'model with run_id {RUN_ID} retrieved')
     return model
 
